@@ -1,0 +1,144 @@
+.outerdiv {
+    width: 98vw;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerdiv {
+    border: 1px solid rgb(230, 230, 230);
+    width: 35%;
+    height: 89%;
+    border-radius: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.heading1 {
+    font-size: 28px;
+    margin-top: 35px;
+    margin-left: 200px;
+}
+
+.head2 {
+    display: flex
+}
+
+.heading2 {
+    font-size: 20px;
+    align-content: flex-start;
+    margin-left: 135px;
+
+
+
+}
+
+.email {
+    width: 410px;
+}
+
+.Email {
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+.butn {
+
+    font-size: 25px;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 45px;
+    color: #1a73e8;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    border: 0;
+
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 5px;
+    padding-left: 0px;
+    margin-top: 20px;
+    font-size: 16px;
+  
+}
+
+.btn1 {
+    font-size: 18px;
+    font-style: normal;
+    margin-bottom: 500px;
+    color: #1a73e8;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+    border: 0;
+    margin-left: 55px;
+}
+
+.nextbutton {
+    margin-left: 235px;
+}
+
+.btn2 {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.fun {
+    margin-left: 200px;
+    margin-top: 40px;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.color1 {
+    color: #1a73e8
+}
+
+.color2 {
+    color: red;
+}
+
+.color3 {
+    color: orange;
+}
+
+.color4 {
+    color: greenyellow
+}
+
+.forgotemail {
+    margin-left: 10%;
+
+}
+
+.size {
+    margin-left: 11%;
+    font-size: 16px;
+}
+
+.buttn {
+    margin-left: 10%;
+    font-size: 25px;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 45px;
+    color: #1a73e8;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    border: 0;
+}

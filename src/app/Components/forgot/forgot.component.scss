@@ -1,0 +1,66 @@
+.outerdiv{
+    border: 2px solid white;
+    width: 99vw;
+    height: 98vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerdiv{
+    
+    border: 1px solid rgb(230, 230, 230);
+    width: 33%;
+    height: 77%;
+    border-radius: 10px;
+   border-radius: 5px;
+    margin-top: 10px;
+}
+.heading1{
+    font-size: 28px;
+   margin-top: 35px;
+   margin-left: 32%;
+}
+.heading2{
+    font-size: 18px;
+    margin-left: 30%;
+    
+    
+}
+.email{
+    width: 410px;
+}
+.Email{
+    margin-left: 10%;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.mat-raised-button{
+    margin-left: 390px;
+    margin-top: 15px;
+    background-color:#1a73e8;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.color1{
+    color: #1a73e8
+    
+}
+.color2{
+color: red;
+}
+ .color3{
+ color: orange;
+ }
+.color4{
+ color: greenyellow
+    
+}
+.fun{
+margin-left: 40%;
+margin-top: 40px;
+font-size: 24px;
+
+}

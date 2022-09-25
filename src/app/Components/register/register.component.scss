@@ -10,7 +10,7 @@
     
     border: 1px solid rgb(230, 230, 230);
     width: 59%;
-    height: 92%;
+    height: 94%;
     border-radius: 10px;
     align-items: center;
     justify-content: space-around;
@@ -24,23 +24,24 @@
 .input-field{
     display: flex;
     flex-direction: row;
-    margin:25px;
-
-    
+   margin: 5px;
+ 
+  
 }
 .input-name{
     margin-right: 10px;
    
 }
 .userinput-field{
-   
+   padding-top: 1px;
     width: 408px;
-    padding-left: 25px;
+    padding-left: 9px;
+    
     
 }
 .input-pass{
-    margin-right: 10px;
-    padding-bottom: 0px;
+margin-right: 10px;
+  padding-left: 2px;
 }
 .pass{
     margin-left: 20px;
@@ -56,22 +57,24 @@
    
 }
 input.checkbx{
-    height: 18px;
+    height: 20px;
     width: 20px;
+    margin-left: 4%;
 }
 .field{
     display: flex;
     flex-direction: row;
+    margin-top: 35px;
 }
 .size{
     font-size: 14px;
+    margin-left: 1%;
 
 }
 .size2{
     font-size: 14px;
+    padding-left: 15px;
    
-   
-    
 }
 
 .button{
@@ -89,7 +92,7 @@ input.checkbx{
 }
 .login{
     font-size: 16px;
-  margin-left: 20px;
+  margin-left: 8px;
   margin-top: 42px;
     margin-bottom: 16px;
     padding-top: 5px;
@@ -138,14 +141,14 @@ input.checkbx{
 display: flex;
 }
 .fun{
-    margin-left: 30px;
+    margin-left: 4px;
     margin-top: 40px;
     justify-content: space-around;
     font-size: 24px;
+   
+    
 }
-.heading{
-    margin-top: 32px;
-}
+
 .color1{
 color: #1a73e8
 
@@ -174,5 +177,27 @@ color: orange;
     border: 0;
 
 }
+.Current{
+    padding-top: 20px;
+    margin-left: 12px;
+    color: #1a73e8;
+    font-size: 15px;
+    font-weight: 510;
+}
+.pass1{
+margin: 2px;
+padding-top: 8%;
+height: 56px;
+}
+
+.heading{
+    margin-top: 32px;
+   margin-left: 4px;
+ 
+}
+.size3{
+    padding-left: 15px;
+}
+
 
 

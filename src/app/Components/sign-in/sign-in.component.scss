@@ -1,6 +1,7 @@
 .outerdiv {
-    width: 98vw;
-    height: 97vh;
+    border: 2px solid white;
+    width: 99vw;
+    height: 99vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,44 +59,6 @@
 
 }
 
-.button {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    padding: 5px;
-    padding-left: 0px;
-    margin-top: 20px;
-    font-size: 16px;
-  
-}
-
-.btn1 {
-    font-size: 18px;
-    font-style: normal;
-    margin-bottom: 500px;
-    color: #1a73e8;
-    display: inline-block;
-    position: relative;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: inherit;
-    text-align: left;
-    border: 0;
-    margin-left: 55px;
-}
-
-.nextbutton {
-    margin-left: 235px;
-}
-
-.btn2 {
-    background-color: #1a73e8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
-
 .fun {
     margin-left: 200px;
     margin-top: 40px;
@@ -142,3 +105,45 @@
     font-size: inherit;
     border: 0;
 }
+.mat-raised-button{
+    background-color:#1a73e8;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     margin-top: 25px;
+    padding: 5px;
+    padding-left: 0px;
+   padding-top: 2px;
+   padding-bottom: 25px;
+    
+}
+.btn1{
+    font-weight: 400;
+    margin-left: 48px;
+    font-size: 16px;
+    font-style: normal;
+   margin-bottom: 27px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 400;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    border: 0;
+   
+   
+}
+
+.btn2{
+margin-left: 245px;
+padding-bottom: 28px;
+}
+

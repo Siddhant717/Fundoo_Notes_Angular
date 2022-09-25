@@ -13,15 +13,21 @@
         <div>
             <h3 class="heading1">Find your email</h3>
         </div>
+       
         <div>
             <p class="heading2"> Enter your recovery email</p>
         </div>
+        <form [formGroup]="forgotform" (ngSubmit)="onSubmit()">
+        <div>
         <div class="Email">
             <mat-form-field class ="email" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email">
+                <input matInput placeholder="Email" formControlName="email">
+                <mat-error>This field is required</mat-error>
                </mat-form-field>
         </div>
         <button class="mat-raised-button">Next</button>
+        </div>
+        </form>
 </div>
 </div>

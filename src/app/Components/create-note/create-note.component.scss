@@ -1,0 +1,43 @@
+.outerdiv{
+    border: 1px solid gray;
+    height: 140px;
+    width: 35%;
+   border-radius: 6px;
+    margin-left: 35%;
+
+    
+}
+.innerdiv{
+
+    height: 2%;
+    width: 100%;
+}
+.input-title{
+display: flex;
+height: 40px;
+width: 98.6%;
+}
+.note{
+  margin-top: 42px;
+  padding: 1px;
+  display: flex;
+  align-items: flex-start;
+
+}
+.button{
+    
+    display: flex;
+    flex-direction: row;
+    padding-top: 6px;
+   
+}
+.button1{
+    margin-left: 27%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: rgba(0,0,0,.87);
+   padding: 2px;
+   cursor: pointer;
+    
+}

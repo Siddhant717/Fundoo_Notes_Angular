@@ -12,14 +12,31 @@ import { ForgotComponent } from './Components/forgot/forgot.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { GetAllComponent } from './Components/get-all/get-all.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     SignInComponent,
     ForgotComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
+    GetAllComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    IconsComponent,
+    ArchiveComponent,
+    TrashComponent
     
   ],
   imports: [
@@ -29,7 +46,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

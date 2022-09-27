@@ -1,0 +1,13 @@
+
+<div class="outerdiv">
+<div class="innerdiv">
+    <input type="text"  class="input-title"  placeholder="Title" *ngIf="isshow">
+</div>
+<div class="note">
+    <input type="text"  class="input-title"  placeholder="Take a note.." *ngIf="!isshow || isshow" (click)="show()">
+</div>
+<div class="button" *ngIf="isshow">
+   <app-icons></app-icons> 
+   <button class="button1" (click)="close()">Close</button>
+</div>
+</div>

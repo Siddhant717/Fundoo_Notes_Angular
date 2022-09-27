@@ -135,18 +135,20 @@ input.checkbx{
 .paragraph1{
     font-size: 16px;
     font-weight: 220;
-   margin-left: 55px;
+   margin-left: 50px;
+    display: flex;
+   box-sizing: border-box;
+   display: block;
+   text-align: center;
+margin-right: 40px;
+
 }
-.paragraph{
-display: flex;
-}
+
 .fun{
     margin-left: 4px;
     margin-top: 40px;
     justify-content: space-around;
     font-size: 24px;
-   
-    
 }
 
 .color1{
@@ -198,6 +200,5 @@ height: 56px;
 .size3{
     padding-left: 15px;
 }
-
 
 

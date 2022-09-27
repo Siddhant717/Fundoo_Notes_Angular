@@ -1,0 +1,26 @@
+.outerdiv{
+    border: 1px solid gray;
+    width: 320px;
+    height: 122px;
+    margin-left: 20%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+}
+.title {
+  
+    height: 35%;
+    padding-top: 0px;
+    
+}
+.input-title{
+   
+    width: 97.8%;
+    height: 36px;
+}
+.note{
+    
+    height: 36px;
+    padding-top: 0px;
+}

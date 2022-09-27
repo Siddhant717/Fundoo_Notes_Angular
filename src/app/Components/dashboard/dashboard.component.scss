@@ -1,0 +1,91 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+background-color: #fff;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .imag{
+    height: 40px;
+    width: 40px;
+    margin-left: 1.5%;
+  }
+  .searchbar{
+    width: 40%;
+    margin-left: 6%;
+    height: 46px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid rgb(230, 230, 230);
+border-radius: 8px;
+}
+.refresh{
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background-size: 50px 50px;
+    font-weight: 200;
+    position: absolute;
+    margin-left: 78%;
+}
+.view-list{
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background-size: 50px 50px;
+    font-weight: 100;
+    position: absolute;
+    margin-left: 82%; 
+}
+.setting{
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background-size: 50px 50px;
+    font-weight: 100;
+    position: absolute;
+    margin-left: 86%;
+}
+.app{
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background-size: 50px 50px;
+    font-weight: 100;
+    position: absolute;
+    margin-left: 92%; 
+}
+.prof{
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background-size: 50px 50px;
+    font-weight: 100;
+    position: absolute;
+    margin-left: 95%; 
+}

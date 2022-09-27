@@ -1,26 +1,30 @@
 .outerdiv{
-    border: 1px solid gray;
-    width: 320px;
-    height: 122px;
-    margin-left: 20%;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 6px;
+    width: 310px;
+  border: 1px solid rgb(186, 184, 184);
+   border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 1px  rgb(186, 184, 184);
+    margin-left: 45px;
 }
-.title {
-  
-    height: 35%;
-    padding-top: 0px;
-    
+.title{
+    height: 30px;
+     border: 0px transparent;
+     font-size: medium;
+     background-color: transparent;
+     width: 98.7%;
+    padding: 2px 5px 7px 2px;
+ 
 }
-.input-title{
-   
-    width: 97.8%;
-    height: 36px;
+.note
+{
+    background-color: transparent;
+    height: 30px;
+    width: 98.7%;
+    padding: 2px 5px 7px 2px;
+    font-weight: 400;
+     border: 0px transparent;
+    border-width: 1px 1px 1px 6px;
 }
-.note{
-    
-    height: 36px;
-    padding-top: 0px;
+input{
+    outline: none;
 }

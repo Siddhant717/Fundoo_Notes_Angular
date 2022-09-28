@@ -10,7 +10,7 @@ export class HttpService {
 
   constructor(private httpClient:HttpClient) { }
 
-  postService(url:string,reqdata:any, token:boolean=false, httpOptions:any){
+postService(url:string,reqdata:any, token:boolean=false, httpOptions:any){
     console.log(reqdata);
     return this.httpClient.post(url,reqdata,token && httpOptions)
 }

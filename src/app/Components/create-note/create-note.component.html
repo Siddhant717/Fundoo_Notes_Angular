@@ -5,12 +5,12 @@
 
 <div class="outerdiv">
     <div class="innerdiv">
-        <div *ngIf="isshow">
-            <input class="title" type="text" placeholder="Title">
+        <div  class="q"    *ngIf="isshow">
+            <input class="title" type="text" placeholder="Title" [(ngModel)]="title" >
         </div>
         <div *ngIf="!isshow || isshow" (click)="show()">
             <div class="let">
-                <input class="note" type="text" placeholder="Take a note...">
+                <input class="note" type="text" placeholder="Take a note..." [(ngModel)]="description">
                 <div class="cc">
                     <div class="a">
                 <span *ngIf="!isshow" class="material-symbols-outlined" style="cursor: pointer;">check_box</span>

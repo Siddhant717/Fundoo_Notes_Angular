@@ -20,6 +20,10 @@ export class ForgotComponent implements OnInit {
     if (this.forgotform.valid) {
       console.log("valid data", this.forgotform.value);
       console.log("do api call")
+      let data = {
+        emailId: this.forgotform.value.email
+      }
+      this.user.forgot(data).subscribe((result: any) => console.log(result))
     }
     else
     {

@@ -1,12 +1,10 @@
 <div class="outerdiv">
-    <div class="innerdiv">
+    <div class="innerdiv" *ngFor="let note of childMessage">
         <div>
-            <input class="title" type="text" placeholder="Title">
+            <p>{{note.title}}</p>
+            <p>{{note.description}}</p>
         </div>
         <div>
-            <input class="note" type="text" placeholder="Take a note">
-        </div>
-        <div >
             <app-icons></app-icons>
         </div>
     </div>

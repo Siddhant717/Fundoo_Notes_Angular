@@ -23,10 +23,19 @@ export class SignInComponent implements OnInit {
     if (this.signinForm.valid) {
       console.log("valid data", this.signinForm.value);
       console.log("do api call");
+      let data = {
+       
+        emailId: this.signinForm.value.email,
+        password: this.signinForm.value.password
+      }
+      this.user.signin(data).subscribe((result: any) => {console.log(result.token),
+      localStorage.setItem('token',result.token)}
+      )
     }
       else {
         console.log('invalid data', this.signinForm.value);
         console.log("no api call")
       }
-}
-}
+
+    }
+  }

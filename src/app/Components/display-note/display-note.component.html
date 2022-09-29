@@ -1,11 +1,11 @@
 <div class="outerdiv">
     <div class="innerdiv" *ngFor="let note of childMessage">
-        <div>
+        <div (click)="openDialog(note)">
             <p>{{note.title}}</p>
             <p>{{note.description}}</p>
         </div>
         <div>
-            <app-icons></app-icons>
+            <app-icons [childMessage]="note"></app-icons>
         </div>
     </div>
 </div>

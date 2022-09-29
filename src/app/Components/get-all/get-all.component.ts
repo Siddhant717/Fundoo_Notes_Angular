@@ -16,8 +16,8 @@ export class GetAllComponent implements OnInit {
       this.note.getNotes().subscribe((result: any) => {
         console.log(result);
         this.noteArray = result.allnotes
-        
+      
       })
     }
-
+    
 }

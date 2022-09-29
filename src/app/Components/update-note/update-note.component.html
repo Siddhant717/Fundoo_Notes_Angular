@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <input class="title" type="text" placeholder="Title" [(ngModel)]="title">
+    </div>
+    <div>
+        <input class="desc" type="text" placeholder="Take a note" [(ngModel)]="description">
+    </div>
+    <div>
+        <div class="down-icons">
+            <div>
+                <app-icons></app-icons>
+            </div>
+            <div class="close">
+                <button class="button1"  (click)="onClose()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

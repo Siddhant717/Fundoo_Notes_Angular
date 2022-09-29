@@ -3,7 +3,17 @@
   <img  class="imag1"  src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt=""> 
   <img class="imag2" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
   <img class="imag3" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-  <img class="imag4" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-  <img class="imag5" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+  <img class="imag4" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" (click)="archive()" >
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span class="delete" (click)="OnSubmit()">Delete note</span>
+    </button>
+    
+  </mat-menu>
+
 </div>
+
 

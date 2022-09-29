@@ -24,6 +24,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     DisplayNoteComponent,
     IconsComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    UpdateNoteComponent
     
   ],
   imports: [
@@ -52,7 +56,9 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,7 +28,7 @@ token:any;
    let header = {
      headers: new HttpHeaders({
        'Content-Type': 'application/json',
-       'Authorization': 'Bearer ' + this.token
+       'Authorization': "Bearer " + this.token
      })
    }
    return this.http.getService('https://localhost:44377/Note/GetAllNoteByUsingJoin',true,header)
@@ -51,19 +51,10 @@ Trashnote(data:any){
       'Authorization': "Bearer "+this.token 
     })
   }
-  return this.http.putService(`https://localhost:44377/Note/TrashNote/${data}`, {}, true, header)
+  return this.http.putService(`https://localhost:44377/Note/TrashNote/${data}`,data, true, header)
 }
-// Deletenote(data: any){
-//   console.log(data,this.token);
-//   let header = {
-//     headers: new HttpHeaders({
-//       'Content-Type': 'application/json',
-//       'Authorization': "Bearer "+this.token 
-//     })
-//   }
-//   return this.http.DeleteService(`https://localhost:44377/Note/DeleteNote/${data.NoteId}`, true, header)
-// }
-archiveNote(data: any){
+
+ArchiveNote(data: any){
   console.log(data,this.token);
   let header = {
     headers: new HttpHeaders({
@@ -71,7 +62,7 @@ archiveNote(data: any){
       'Authorization': "Bearer "+this.token 
     })
   }
-  return this.http.putService(`https://localhost:44377/Note/ArchieveNote/${data}`, {}, true, header)
+  return this.http.putService(`https://localhost:44377/Note/ArchieveNote/${data}`, data, true, header)
 }
 }
 

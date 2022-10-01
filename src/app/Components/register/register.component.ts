@@ -34,7 +34,8 @@ onSubmit() {
       password: this.registerForm.value.password
      
     }
-    this.user.signup(data).subscribe((result: any) => console.log(result))
+    this.user.signup(data).subscribe((result: any) => 
+    console.log(result))
   }
   else
   {

@@ -2,7 +2,7 @@ import {  Input, OnInit } from '@angular/core';
 import {Component, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
-import { NoteService } from 'src/app/services/noteService/note.service';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 })
 export class DisplayNoteComponent implements OnInit {
 @Input() childMessage: any;
-  constructor(private dialog: MatDialog,private note:NoteService) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }

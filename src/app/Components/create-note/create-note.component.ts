@@ -28,5 +28,6 @@ description: any;
     }
     this.note.addNotes(data).subscribe((result: any) => console.log(result))
   }
+ 
   }
 

@@ -12,16 +12,16 @@ export class UpdateNoteComponent implements OnInit {
   title:any;
   description:any;
   constructor( public dialogRef: MatDialogRef<UpdateNoteComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, private not:NoteService) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, private note:NoteService) { }
 
   ngOnInit(): void {
     console.log(this.data)
      this.title=this.data.title;
      this.description=this.data.description;
   }
-  onClose(): void {
+  onClose() {
     this.dialogRef.close();
-    let dat={
+    let data={
       title:this.title,
       description:this.description,
       color:'white',
@@ -32,7 +32,7 @@ export class UpdateNoteComponent implements OnInit {
       reminder: "2022-09-28T07:16:08.706Z",
       NoteId: this.data.noteId
     }
-    this.not.updateNotes(dat).subscribe((result: any) => console.log(result))
+    this.note.updateNotes(data).subscribe((result: any) => console.log(result))
   }
   }
 

@@ -12,13 +12,15 @@ export class IconsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  OnSubmit() :void{
+  OnDelete() {
     console.log(this.childMessage)
-    this.not.Trashnote(this.childMessage.noteId).subscribe((result:any)=>console.log(result))
+    this.not.Trashnote(this.childMessage.noteId).subscribe((result:any)=>
+    console.log(result))
   }
-  archive():void{
-    console.log(this.childMessage)
-    this.not.archiveNote(this.childMessage.noteId).subscribe((result:any)=>console.log(result))
-  }
+  Onarchive(){
+     console.log(this.childMessage)
+     this.not.ArchiveNote(this.childMessage.noteId).subscribe((result:any)=>
+     console.log(result))
+   }
 
 }

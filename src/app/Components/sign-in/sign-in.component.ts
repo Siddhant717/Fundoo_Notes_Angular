@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
 
 
@@ -10,13 +11,19 @@ import { UserService } from 'src/app/services/userService/user.service';
 })
 export class SignInComponent implements OnInit {
   signinForm !: FormGroup
-  constructor(private formBuilder: FormBuilder, private user: UserService) { }
-
+  
+  constructor(private formBuilder: FormBuilder, private user: UserService,private router:Router) { }
+ 
   ngOnInit(): void {
+   
+ 
+   
+ 
     this.signinForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     })
+    
   }
   onSubmit() {
     // stop here if form is invalid
@@ -28,8 +35,10 @@ export class SignInComponent implements OnInit {
         emailId: this.signinForm.value.email,
         password: this.signinForm.value.password
       }
-      this.user.signin(data).subscribe((result: any) => {console.log(result.token),
-      localStorage.setItem('token',result.token)}
+      this.user.signin(data).subscribe((result: any) => 
+      {console.log(result.token),
+      localStorage.setItem('token',result.token)
+      this.router.navigate(["/dashboard/notes"])}
       )
     }
       else {

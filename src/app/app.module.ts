@@ -27,6 +27,7 @@ import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { AuthguardService } from './services/myService/authguard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatDialogModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

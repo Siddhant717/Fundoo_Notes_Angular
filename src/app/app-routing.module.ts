@@ -8,13 +8,15 @@ import { RegisterComponent } from './Components/register/register.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
+  {path:'', redirectTo:"/signin", pathMatch:'full' },
   {path:"signup",component:RegisterComponent},
   {path:"signin",component:SignInComponent},
   {path:"forgotpassword",component:ForgotComponent},
   {path:"resetpassword",component:ResetPasswordComponent},
-  {path:"dashboard",component:DashboardComponent,
+  {path:"dashboard",component:DashboardComponent,canActivate:[AuthenticationGuard],
 children:[
   {path:"notes",component: GetAllComponent},
   {path:"archive",component: ArchiveComponent},

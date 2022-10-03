@@ -31,7 +31,7 @@ token:any;
        'Authorization': "Bearer " + this.token
      })
    }
-   return this.http.getService('https://localhost:44377/Note/GetAllNoteByUsingJoin',true,header)
+   return this.http.getService('https://localhost:44377/Note/GetAllNote',true,header)
  }
  updateNotes(data: any) {
   console.log(data,this.token);

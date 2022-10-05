@@ -1,6 +1,6 @@
 .image{
   
-    display: flex;
+      display: flex;
     align-items: center;
     margin-top: 12px;
 margin-bottom: 5px;
@@ -48,3 +48,14 @@ button{
     background: none;
     width: 15px;
 }
+.palette{
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.input-field{
+    border: 2px solid green;
+    
+}
+

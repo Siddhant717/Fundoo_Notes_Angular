@@ -1,7 +1,15 @@
 <div class="image">
   <img class="imag"    src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt=""> 
   <img  class="imag1"  src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt=""> 
-  <img class="imag2" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+  <div>
+  <img class="imag2"  [matMenuTriggerFor]="paletteMenu" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+  <mat-menu #paletteMenu="matMenu" class="input-field" >
+    <div *ngFor="let colors of colorArray" class="palette">
+      <button [style.background]="colors.name" (click)="selectColor(colors.name)">
+        {{colors.name}}</button>
+    </div >
+  </mat-menu>
+  </div>
   <img class="imag3" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
   <img class="imag4"  src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" (click)="Onarchive()" >
   <button mat-icon-button [matMenuTriggerFor]="menu">

@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 })
 export class TrashComponent implements OnInit {
 noteArray:any;
+isTrash:boolean=false;
 
   constructor(private note:NoteService) { }
 

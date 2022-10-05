@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output,OnInit, EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/noteService/note.service';
 
 @Component({
@@ -10,7 +10,9 @@ export class CreateNoteComponent implements OnInit {
 isshow=false;
 title: any;
 description: any;
+result:any;
   constructor(private note: NoteService) { }
+  @Output() messageEvent = new EventEmitter<any>();
 
   ngOnInit(): void {
   }
@@ -24,10 +26,13 @@ description: any;
     let data={
       title:this.title,
       description:this.description,
-      color:'Blue'
+      color:'white'
     }
-    this.note.addNotes(data).subscribe((result: any) => console.log(result))
-  }
+    this.note.addNotes(data).subscribe((result: any) =>{
+    console.log(result)
+    this.messageEvent.emit(result)
+  })
  
   }
-
+ 
+}

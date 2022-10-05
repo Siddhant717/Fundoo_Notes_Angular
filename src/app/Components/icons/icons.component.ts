@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Output,OnInit, EventEmitter,Input } from '@angular/core';
 import { NoteService } from 'src/app/services/noteService/note.service';
+
 
 @Component({
   selector: 'app-icons',
@@ -8,15 +9,18 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 })
 export class IconsComponent implements OnInit {
   @Input() childMessage: any;
+  @Output() messageEvent = new EventEmitter<any>();
   constructor(private note: NoteService) { }
 
   ngOnInit(): void {
   }
   OnDelete() {
     console.log(this.childMessage)
-    this.note.Trashnote(this.childMessage.noteId).subscribe((result:any)=>
-    console.log(result))
-  }
+    this.note.Trashnote(this.childMessage.noteId).subscribe((result:any)=>{
+    console.log(result)
+    this.messageEvent.emit(result)
+  })
+}
   Onarchive(){
      console.log(this.childMessage)
      this.note.ArchiveNote(this.childMessage.noteId).subscribe((result:any)=>
@@ -45,6 +49,7 @@ export class IconsComponent implements OnInit {
     }
     this.note.notesColor(Data).subscribe((response:any) =>{
       console.log(response)
+      this.messageEvent.emit(response)
       
     })
   }

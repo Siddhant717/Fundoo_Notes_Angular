@@ -8,7 +8,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 })
 export class TrashComponent implements OnInit {
 noteArray:any;
-isTrash:boolean=false;
+
 
   constructor(private note:NoteService) { }
 
@@ -21,10 +21,14 @@ isTrash:boolean=false;
       this.noteArray =  result.allnotes.filter((obj:any)=>{
         return obj.isTrash == true
     })
-   this.noteArray.reverse();
+    console.log(this.noteArray)
 
   })
 
+}
+receiveMessage(e:any) {
+  console.log(e) ;
+  this.getAllNotes();
 }
 
 }

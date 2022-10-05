@@ -15,10 +15,11 @@ export class GetAllComponent implements OnInit {
     getAllNotes() {
       this.note.getNotes().subscribe((result: any) => {
         console.log(result);
-        this.noteArray = result.allnotes
-        this.noteArray = this.noteArray.filter((result:any) => {
+         this.noteArray = result.allnotes
+         this.noteArray = this.noteArray.filter((result:any) => {
           return result.isArchieve==false && result.isTrash == false   
         });
+        
        
   
     })

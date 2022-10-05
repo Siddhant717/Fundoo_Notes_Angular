@@ -11,18 +11,23 @@ export class ArchiveComponent implements OnInit {
   constructor(private note: NoteService) { }
 
   ngOnInit(): void {
-    this.getAllNotes
+    this.getAllNotes()
   }
-   getAllNotes() {
-     this.note.getNotes().subscribe((result: any) => {
-       console.log(result);
-     
-       this.noteArray =  result.allnotes.filter((obj:any)=>{
-       console.log(this.noteArray)
-        return obj.isArchieve == true 
-       })
-        console.log(this.noteArray)
-     })
-  }
+  getAllNotes() {
+    this.note.getNotes().subscribe((result: any) => {
+      console.log(result);
+      this.noteArray = result.allnotes
+      this.noteArray = this.noteArray.filter((result: any) => {
+        return result.isArchieve == true
+      });
 
+
+
+    })
+
+  }
+  receiveMessage(e: any) {
+    console.log(e)
+    this.getAllNotes();
+  }
 }

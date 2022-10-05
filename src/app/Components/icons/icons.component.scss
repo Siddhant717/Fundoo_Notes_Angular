@@ -1,61 +1,88 @@
-.image{
-  
-      display: flex;
+.image {
+
+    display: flex;
     align-items: center;
     margin-top: 12px;
-margin-bottom: 5px;
-    
+    margin-bottom: 5px;
+
 }
-.imag{
-height: 20px;
-width: 20px;
-margin-left: 2px;
+
+.imag {
+    height: 20px;
+    width: 20px;
+    margin-left: 2px;
 }
-.imag1{
+
+.imag1 {
     margin-left: 25px;
     height: 20px;
-width: 20px;
-padding: 2px;
+    width: 20px;
+    padding: 2px;
 }
-.imag2{
+
+.imag2 {
     margin-left: 29px;
     height: 20px;
-width: 20px;
+    width: 20px;
+    cursor: pointer;
 }
-.imag3{
+
+.imag3 {
     margin-left: 33px;
     height: 20px;
-width: 20px;
+    width: 20px;
 }
-.imag4{
+
+.imag4 {
     margin-left: 36px;
     height: 20px;
-width: 20px;
+    width: 20px;
 }
-.imag5{
+
+.imag5 {
     margin-left: 25px;
     height: 20px;
-width: 20px;
+    width: 20px;
 }
-button{
+
+button {
     border: none;
     background: transparent;
     cursor: pointer;
     margin-left: 24px;
 }
-.delete{
-    border: 2px solid red;
+
+.delete {
+
     background: none;
     width: 15px;
 }
-.palette{
-    border: 2px solid red;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-.input-field{
-    border: 2px solid green;
-    
+
+.palette {
+
+    height: 30px;
+
+    button {
+        height: 30px;
+        border-radius: 48.5%;
+        border: none;
+        width: 30px;
+        cursor: pointer;
+        margin-left: 0px;
+    }
+
+    :hover {
+        border: 1px solid black;
+    }
+
 }
 
+.check {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 121px;
+    padding-top: 0;
+    padding-bottom: 0px;
+}

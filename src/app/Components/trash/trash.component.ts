@@ -18,17 +18,20 @@ noteArray:any;
   getAllNotes() {
     this.note.getNotes().subscribe((result: any) => {
       console.log(result);
-      this.noteArray =  result.allnotes.filter((obj:any)=>{
-        return obj.isTrash == true
-    })
-    console.log(this.noteArray)
+       this.noteArray = result.allnotes
+       this.noteArray = this.noteArray.filter((result:any) => {
+        return result.isTrash==true   
+      });
+      
+     
 
   })
 
 }
-receiveMessage(e:any) {
-  console.log(e) ;
-  this.getAllNotes();
-}
+
+ receiveMessage(e:any) {
+  
+   this.getAllNotes();
+ }
 
 }

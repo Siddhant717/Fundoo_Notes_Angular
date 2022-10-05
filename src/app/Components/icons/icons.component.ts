@@ -23,9 +23,11 @@ export class IconsComponent implements OnInit {
 }
   Onarchive(){
      console.log(this.childMessage)
-     this.note.ArchiveNote(this.childMessage.noteId).subscribe((result:any)=>
-     console.log(result))
-   }
+     this.note.ArchiveNote(this.childMessage.noteId).subscribe((result:any)=>{
+     console.log(result)
+     this.messageEvent.emit(result)
+   })
+  }
    colorArray= [
     { code: '#ffffff', name: 'white' },
     { code: '#FF6347', name: 'Tomato' },

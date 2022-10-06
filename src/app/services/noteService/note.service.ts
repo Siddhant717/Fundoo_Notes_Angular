@@ -64,6 +64,16 @@ ArchiveNote(data: any){
   }
   return this.http.putService(`https://localhost:44377/Note/ArchieveNote/${data}`, data, true, header)
 }
+UnArchiveNote(data:any){
+  console.log(data,this.token);
+  let header = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer "+this.token 
+    })
+  }
+  return this.http.putService(`https://localhost:44377/Note/ArchieveNote/${data}`, data, true, header)
+}
 notesColor(data: any){
   console.log(data,this.token);
   let header = {
@@ -73,6 +83,16 @@ notesColor(data: any){
     })
   }
   return this.http.putService(`https://localhost:44377/Note/UpdateColor/${data.NoteId}/${data.color}`, data, true, header)
+}
+DeleteForever(data:any){
+  console.log(data,this.token);
+  let header = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer "+this.token 
+    })
+  }
+  return this.http.DeleteService(`https://localhost:44377/Note/DeleteNote/${data}`, true, header)
 }
 }
 

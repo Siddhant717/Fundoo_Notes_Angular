@@ -1,16 +1,15 @@
-<div class="outerdiv" >
-    <div class="innerdiv" *ngFor="let note of childMessage" [style.background]="note.color" >
-        
-        <div (click)="openDialog(note)"  >
-            <p class="title">{{note.title}}</p>
-            <p class="desc">{{note.description}}</p>
-            
+<div class="outerdiv">
+    <div class="innerdiv" *ngFor="let note of childMessage" [style.background]="note.color">
+
+        <div (click)="openDialog(note)">
+            <p>{{note.title}}</p>
+            <p>{{note.description}}</p>
         </div>
-        
+
         <div>
-            <app-icons [childMessage]="note" (messageEvent)="receiveMessage($event)" ></app-icons>
+            <app-icons [childMessage]="note" (messageEvent)="receiveMessage($event)"></app-icons>
         </div>
-           
-   
+
+
     </div>
 </div>

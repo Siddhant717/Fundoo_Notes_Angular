@@ -1,10 +1,10 @@
 .image {
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-top: 12px;
     margin-bottom: 5px;
-
+    width: 250px;
 }
 
 .imag {
@@ -14,35 +14,40 @@
 }
 
 .imag1 {
-    margin-left: 25px;
+    margin-left: 20px;
     height: 20px;
     width: 20px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .imag2 {
-    margin-left: 29px;
+    margin-left: 25px;
     height: 20px;
     width: 20px;
     cursor: pointer;
 }
 
 .imag3 {
-    margin-left: 33px;
+    margin-left: 28px;
     height: 20px;
     width: 20px;
+    cursor: pointer;
 }
 
 .imag4 {
-    margin-left: 36px;
+    margin-left: 27px;
     height: 20px;
     width: 20px;
+    cursor: pointer;
 }
 
 .imag5 {
-    margin-left: 25px;
-    height: 20px;
+    margin-left: 10px;
+    height: 18px;
     width: 20px;
+    cursor: pointer;
+    
 }
 
 button {
@@ -53,13 +58,26 @@ button {
 }
 
 .delete {
-
     background: none;
-    width: 15px;
+    width: 18px;
+    letter-spacing: .01428571em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+button {
+    margin-left: 0px;
+}
+
+
+
+mat-menu-item {
+    padding: 0px 10px;
 }
 
 .palette {
-
     height: 30px;
 
     button {
@@ -72,17 +90,17 @@ button {
     }
 
     :hover {
-        border: 1px solid black;
+        border: 2px solid black;
     }
 
 }
 
 .check {
-   
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 121px;
     padding-top: 0;
     padding-bottom: 0px;
+
 }

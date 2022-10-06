@@ -1,6 +1,8 @@
 import { Component, Output, OnInit, EventEmitter, Input } from '@angular/core';
 import { NoteService } from 'src/app/services/noteService/note.service';
-
+import { Router, ActivatedRoute } from '@angular/router';
+import { ArchiveComponent } from '../archive/archive.component';
+import { TrashComponent } from '../trash/trash.component';
 
 @Component({
   selector: 'app-icons',
@@ -10,9 +12,20 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 export class IconsComponent implements OnInit {
   @Input() childMessage: any;
   @Output() messageEvent = new EventEmitter<any>();
-  constructor(private note: NoteService) { }
+ 
+  isArchieve:boolean=false
+  isTrash:boolean=false
+  constructor(private note: NoteService , private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    let comp = this.route.snapshot.component;
+
+  if(comp==ArchiveComponent){
+    this.isArchieve=true
+  }
+  if(comp==TrashComponent){
+    this.isTrash=true
+  }
   }
   OnDelete() {
     console.log(this.childMessage)
@@ -27,6 +40,15 @@ export class IconsComponent implements OnInit {
       console.log(result)
       this.messageEvent.emit(result)
     })
+  }
+  Unarchive(){
+    console.log(this.childMessage)
+    this.note.UnArchiveNote(this.childMessage.noteId).subscribe((result: any) => {
+      console.log(result)
+      this.messageEvent.emit(result)
+    })
+
+
   }
   colorArray = [
     { code: '#ADFF2F', name: 'greenyellow' },
@@ -45,14 +67,25 @@ export class IconsComponent implements OnInit {
   ];
   selectColor(colors: any) {
     console.log(colors)
+    
     let Data = {
       NoteId: this.childMessage.noteId,
       color: colors
-    }
+      
+     }
+     console.log(Data.NoteId)
     this.note.notesColor(Data).subscribe((response: any) => {
       console.log(response)
       this.messageEvent.emit(response)
 
     })
   }
+  Delete() {
+    console.log(this.childMessage)
+    this.note.DeleteForever(this.childMessage.noteId).subscribe((result: any) => {
+      console.log(result)
+      this.messageEvent.emit(result)
+    })
+  }
+
 }

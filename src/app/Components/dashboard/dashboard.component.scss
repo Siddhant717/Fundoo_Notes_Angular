@@ -1,48 +1,60 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-button{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+button {
   border: none;
   background: none;
+  cursor: pointer;
+  
+
+  :hover {
+    border-radius: 50%;
+    background-color: #f1f3f4;
+   
+
+  }
 }
-  
-  
-  .example-is-mobile .example-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-background-color: #fff;
-  }
-  
-  h1.example-app-name {
-    margin-left: 8px;
-  }
-  
-  .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+  background-color: #fff;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-  }
-  
-  .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
-  }
-  .heading{
-    margin-left: 18px;
-  }
-.Keep-Icon{
+  flex: 1 0 auto;
+}
+
+.heading {
+  margin-left: 18px;
+}
+
+.Keep-Icon {
   margin-left: 14px;
   width: 42px;
   height: 40px;
-  
+
 }
 
 .outerdiv {
@@ -54,17 +66,19 @@ background-color: #fff;
   height: 55px;
   border-bottom: 1px solid #d5d8dc;
 }
+
 .S {
   display: flex;
   flex-direction: row;
   border: 1px solid transparent;
   cursor: pointer;
 
-  
+
 }
+
 .searchbar {
   margin-left: 14%;
-  box-shadow: 0 1px 1px 1px  rgb(186, 184, 184);
+  box-shadow: 0 1px 1px 1px rgb(186, 184, 184);
   background-color: #fff;
   border-radius: 12px;
   height: 50px;
@@ -79,45 +93,50 @@ background-color: #fff;
 
 }
 
-.Img{
+.Img {
   height: 22px;
   width: 22px;
-  
- 
+
+
 }
-.Img1{
+
+.Img1 {
   margin-left: 50px;
   height: 22px;
   width: 22px;
-  
- 
+
+
 }
 
 .icon {
   margin-left: 26px;
   height: 40px;
-    width: 40px;
-   
-   
-}
-.search {
-    height: 48px;
-    border: none;
-    font-size: medium;
-    background: #fff;
-    width: 510px;
- padding: 0px 0px;
- margin-top: 0px;
- outline: none;
- 
+  width: 40px;
+
 
 }
+
+.search {
+  height: 48px;
+  border: none;
+  font-size: medium;
+  background: #fff;
+  width: 510px;
+  padding: 0px 0px;
+  margin-top: 0px;
+  outline: none;
+
+
+}
+
 .example-toolbar {
   background: #fff;
 }
+
 h1.example-app-name {
   margin-left: 8px;
 }
+
 .sidenavdiv {
   width: 300px;
   border: 1px solid red;
@@ -139,18 +158,19 @@ h1.example-app-name {
 
 .icons {
   mat-list-item {
-      box-sizing: none;
-      margin: 0 0 0 20px;
-      padding: 0px;
+    box-sizing: none;
+    margin: 0 0 0 20px;
+    padding: 0px;
   }
 }
+
 .C {
   padding: 0 12px;
 }
 
 
 
-.imagdiv{
+.imagdiv {
 
   width: 150px;
   height: 48px;
@@ -158,62 +178,73 @@ h1.example-app-name {
   flex-direction: row;
   margin-left: 300px;
 }
-.refreshdiv{
- width: 48px;
- height: 48px;
 
-font-size: medium;
-
-
-}
-.refresh{
-  width: 24px;
-  height: 24px;
- padding: 5px;
-}
-.view-list{
-
+.refreshdiv {
   width: 48px;
   height: 48px;
-}
-.view{
-  width: 24px;
-  height: 24px; 
-  padding: 5px;
-}
-.settingdiv{
 
-  width: 48px;
-  height: 48px;
+  font-size: medium;
+
+
 }
-.setting{
+
+.refresh {
   width: 24px;
   height: 24px;
   padding: 5px;
 }
-.prof{
+
+.view-list {
+
+  width: 48px;
+  height: 48px;
+}
+
+.view {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+.settingdiv {
+
+  width: 48px;
+  height: 48px;
+}
+
+.setting {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+.prof {
 
   width: 80px;
   height: 48px;
-margin-left: 28px;
-display: flex;
-flex-direction: row;
+  margin-left: 28px;
+  display: flex;
+  flex-direction: row;
 }
-.appdiv{
+
+.appdiv {
   width: 48px;
   height: 48px;
 
 }
-.app{
+
+.app {
   width: 24px;
-  height: 24px; 
+  height: 24px;
   padding: 5px;
 }
-.profdiv{
+
+.profdiv {
   width: 48px;
   height: 48px;
 
 }
+
 .notes {
   display: flex;
   flex-direction: row;
@@ -227,30 +258,35 @@ flex-direction: row;
   cursor: pointer;
 
 }
+
 .B {
-    :hover {
-        background-color: #f1f3f4;
-    }
-   :active{
-        background-color: #feefc3;
-    }
+  :hover {
+    background-color: #f1f3f4;
+  }
+
+  :active {
+    background-color: #feefc3;
+  }
 }
 
-.profile{
+.profile {
   width: 24px;
-  height: 24px; 
+  height: 24px;
   padding: 5px;
 }
-.main{
+
+.main {
   border: 2px solid red;
   width: 280px;
   height: 48px;
 }
-.noteicon{
+
+.noteicon {
   border: 2px solid yellow;
   width: 280px;
   height: 48px;
 }
+
 .img {
   height: 24px;
   width: 24px;

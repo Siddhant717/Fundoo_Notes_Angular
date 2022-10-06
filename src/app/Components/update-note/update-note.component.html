@@ -1,9 +1,9 @@
-<div>
+<div [style.background]="data.color" class="a">
     <div>
-        <input class="title" type="text" placeholder="Title" [(ngModel)]="title">
+        <input class="title" type="text" placeholder="Title" [(ngModel)]="title"  [style.background]="data.color">
     </div>
     <div>
-        <input class="desc" type="text" placeholder="Take a note" [(ngModel)]="description">
+        <input class="desc" type="text" placeholder="Take a note" [(ngModel)]="description"  [style.background]="data.color">
     </div>
     <div>
         <div class="down-icons">

@@ -1,9 +1,9 @@
 <div class="image">
-  <img class="imag"    src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt=""> 
-  <img  class="imag1"  src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt=""> 
+  <img class="imag"    src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="!isTrash" > 
+  <img  class="imag1"  src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="!isTrash"> 
   <div>
    
-  <img class="imag2"  [matMenuTriggerFor]="paletteMenu" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+  <img class="imag2"  [matMenuTriggerFor]="paletteMenu" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="!isTrash">
   <mat-menu #paletteMenu="matMenu">
     <div class="check">
     <div *ngFor="let colors of colorArray" class="palette">
@@ -14,10 +14,13 @@
   </mat-menu>
    
   </div>
-  <img class="imag3" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-  <img class="imag4"  src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" (click)="Onarchive()" >
+  <img class="imag3" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="!isTrash">
+  <img class="imag4"  src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg"  (click)="Onarchive()" *ngIf="!isArchieve && !isTrash" >
+  <img class="imag4"    src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg" *ngIf="isArchieve" alt="" (click)="Unarchive()">
+  <img class="imag"   src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="isTrash" (click)="Delete()">
+  <img class="imag1" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg" alt="" *ngIf="isTrash" (click)="OnDelete()">
   <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon class="imag5" *ngIf="!isTrash">more_vert</mat-icon>
    </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>
